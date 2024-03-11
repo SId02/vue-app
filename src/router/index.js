@@ -22,6 +22,16 @@ const router = createRouter({
 			component: () => import("../views/ContactView.vue"),
 		},
 		{
+			path: "/logindefault",
+			name: "logindefault",
+			component: () => import("../views/LoginPageDefault.vue"),
+		},
+		{
+			path: "/loginwithapi",
+			name: "loginwithapi",
+			component: () => import("../views/LoginWithApi.vue"),
+		},
+		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),
