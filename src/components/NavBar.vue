@@ -7,7 +7,7 @@ import { RouterLink } from "vue-router";
 			class="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl sm:px-6 lg:px-8"
 		>
 			<div class="inline-flex items-center space-x-2">
-				<span class="font-bold">DevUI</span>
+				<span class="font-bold">Vue APP</span>
 			</div>
 			<div class="hidden lg:block">
 				<ul class="inline-flex space-x-8">

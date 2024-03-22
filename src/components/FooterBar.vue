@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
         <div class="w-auto p-8">
           <a href="#">
             <div class="inline-flex items-center">
-              <span class="ml-4 text-lg font-bold">DevUI</span>
+              <span class="ml-4 text-lg font-bold">Vue App</span>
             </div>
           </a>
         </div>
