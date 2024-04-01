@@ -1,5 +1,6 @@
 
 <template>
+  <br><br>
   <div class="flex items-center max-w-sm p-6 mx-auto space-x-4 bg-white shadow-md rounded-xl">
     <div v-if="!isLoggedIn">
       <form @submit.prevent="handleSubmit">
@@ -36,6 +37,8 @@
       </button>
     </div>
   </div>
+  <br>
+  <br>
 </template>
 
 <script>

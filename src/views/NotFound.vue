@@ -12,10 +12,10 @@
     <p class="mt-4 text-base leading-7 text-gray-600">
       Sorry, we couldn&amp;apos:t find the page you&#x27;re looking for.
     </p>
-    <div class="mt-4 flex items-center justify-center gap-x-3">
+    <div class="flex items-center justify-center mt-4 gap-x-3">
       <button
         type="button"
-        class="inline-flex items-center rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        class="inline-flex items-center px-3 py-2 text-sm font-semibold text-black border border-black rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
      @click="$router.back()" 
         >
         <svg
@@ -37,14 +37,14 @@
       </button>
       <button
         type="button"
-        class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        class="px-3 py-2 text-sm font-semibold text-white bg-black rounded-md shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
       >
         Contact us
       </button>
     </div>
   </div>
 </div>
-<!-- https://www.devui.io/components/error -->
+
 </template>
 
 <style scoped></style>
