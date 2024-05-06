@@ -32,11 +32,6 @@ const router = createRouter({
 			component: () => import("../views/LoginWithApi.vue"),
 		},
 		{
-			path: "/testroute",
-			name: "testroute",
-			component: () => import("../views/TestRoute.vue"),
-		},
-		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),
