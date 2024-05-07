@@ -51,14 +51,6 @@ import { RouterLink } from "vue-router";
 						Login With Api
 						</router-link>
 					</li>
-					<li>
-						<router-link
-							to="/testroute"
-							class="text-sm font-semibold text-gray-800 hover:text-gray-900"
-						>
-							testroutes
-						</router-link>
-					</li>
 				</ul>
 			</div>
 			<div class="hidden lg:block">
