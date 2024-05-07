@@ -1,11 +1,9 @@
 
-[Live Demo](vue-app-9r1.pages.dev)
+[Live Demo](https://vue-app-9r1.pages.dev/)
 
 # vue-app
 
 This template should help get you started developing with Vue 3 in Vite.
-
-vue-app-9r1.pages.dev
 
 ## Recommended IDE Setup
 
