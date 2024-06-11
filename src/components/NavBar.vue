@@ -25,13 +25,6 @@ import { RouterLink } from "vue-router";
 					</li>
 					<li>
 						<router-link
-							to="/project"
-							class="text-sm font-semibold text-gray-800 hover:text-gray-900">
-							Project
-						</router-link>
-					</li>
-					<li>
-						<router-link
 							to="/contact"
 							class="text-sm font-semibold text-gray-800 hover:text-gray-900">
 							Contact
