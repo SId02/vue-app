@@ -5,7 +5,7 @@ import { RouterLink } from "vue-router";
 	<div class="relative w-full bg-white">
 		<div class="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
 			<div class="inline-flex items-center space-x-2">
-				<span class="font-bold">Vue App</span>
+				<router-link to="/" class="font-bold">Vue App</router-link>
 			</div>
 			<div class="hidden lg:block">
 				<ul class="inline-flex space-x-8">
@@ -21,6 +21,13 @@ import { RouterLink } from "vue-router";
 							to="/about"
 							class="text-sm font-semibold text-gray-800 hover:text-gray-900">
 							About
+						</router-link>
+					</li>
+					<li>
+						<router-link
+							to="/project"
+							class="text-sm font-semibold text-gray-800 hover:text-gray-900">
+							Project
 						</router-link>
 					</li>
 					<li>

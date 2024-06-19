@@ -5,9 +5,7 @@
 		
 		<div class="px-4 mx-auto max-w-7xl">
 			<div class="py-12 mx-auto max-w-7xl md:py-24">
-				<div
-					class="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2"
-				>
+				<div class="grid items-center justify-items-center gap-x-4 gap-y-10 lg:grid-cols-2">
 					<div class="flex items-center justify-center">
 						<div class="px-2 md:px-12">
 							<p class="text-2xl font-bold text-gray-900 md:text-4xl">
