@@ -39,17 +39,17 @@ import { RouterLink } from "vue-router";
         <router-link to="/randomquotes" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Random Quotes</router-link>
 
         <router-link to="/togglepasswordvisibility" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Toggle Password Visibility</router-link>
-        <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Password Generator</router-link>
+        <router-link to="/passwordgenerator" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Password Generator</router-link>
 
         <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"> Github User Profile Finder </router-link>
 
-        <router-link to="/"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Currency Converter</router-link>
+        <router-link to="/currencyconverter"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Currency Converter</router-link>
 
-        <router-link  to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"></router-link>
+        <router-link  to="/leapyearchecker" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Leap Year Checker</router-link>
 
-        <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"> </router-link>
+        <router-link to="/formvalidation" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Form Validation </router-link>
 
-        <router-link  to="/"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"></router-link>
+        <router-link  to="/tipcalculator"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Tip Calculator</router-link>
 
         <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"> </router-link> 
 
@@ -62,13 +62,13 @@ import { RouterLink } from "vue-router";
         <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg "> </router-link> 
       </div>
 
-        <div class="flex justify-center mt-10 md:mt-20">
+        <!-- <div class="flex justify-center mt-10 md:mt-20">
           <router-link
             to="/"
             class="px-3 py-2 text-sm font-semibold text-black transition-all duration-300 ease-in-out border border-black rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black focus:outline-none focus:shadow-outlinetransform hover:scale-105">
             more Projects...
           </router-link>
-      </div> 
+      </div>  -->
 
     </div>
   </section>

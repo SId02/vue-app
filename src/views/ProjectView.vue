@@ -1,32 +1,32 @@
 <script>
-// import axios from 'axios';
+import axios from 'axios';
   
-//   export default {
-//     data() {
-//       return {
-//         username: '',
-//         password: '',
-//         isLoggedIn: false,
-//       };
-//     },
-//     methods: {
-//       handleLogin() {
-//         axios.post('https://dummyjson.com/auth/login', {
-//           username: this.username,
-//           password: this.password,
-//         })
-//         .then(() => {
-//           this.isLoggedIn = true;
-//         })
-//         .catch((error) => {
-//           console.log(error);
-//         });
-//       },
-//       handleLogout() {
-//         this.isLoggedIn = false;
-//       },
-//     },
-//   };
+  export default {
+    data() {
+      return {
+        username: '',
+        password: '',
+        isLoggedIn: false,
+      };
+    },
+    methods: {
+      handleLogin() {
+        axios.post('https://dummyjson.com/auth/login', {
+          username: this.username,
+          password: this.password,
+        })
+        .then(() => {
+          this.isLoggedIn = true;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      },
+      handleLogout() {
+        this.isLoggedIn = false;
+      },
+    },
+  };
 </script>
 <template>
   
@@ -64,12 +64,12 @@
 	<hr class="border-blue-500 w-50 h-50" />
     <hr class="border-blue-500 w-50" />
 	 -->
-   <!-- <hr class="border-blue-500 w-50" />
+   <hr class="border-blue-500 w-50" />
    <br>
    <br>
-   <hr class="border-blue-500 w-50" /> -->
+   <hr class="border-blue-500 w-50" />
 <!--  -->
-<!-- <div>
+<div>
 		
 		<div class="px-4 mx-auto max-w-7xl">
 			<div class="py-12 mx-auto max-w-7xl md:py-24">
@@ -157,7 +157,7 @@
   <hr class="border-blue-500 w-50" />
    <br>
    <br>
-   <hr class="border-blue-500 w-50" /> -->
+   <hr class="border-blue-500 w-50" />
    <!--  -->
 </template>
 

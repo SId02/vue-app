@@ -29,46 +29,70 @@ const router = createRouter({
 		{
 			path: "/logindefault",
 			name: "logindefault",
-			component: () => import("../views/LoginPageDefault.vue"),
+			component: () => import("../views/pages/LoginPageDefault.vue"),
 		},
 		{
 			path: "/loginwithapi",
 			name: "loginwithapi",
-			component: () => import("../views/LoginWithApi.vue"),
+			component: () => import("../views/pages/LoginWithApi.vue"),
 		},
 		{
 			path: "/agevalidation",
 			name: "agevalidation",
-			component: () => import("../views/AgeValidation.vue"),
+			component: () => import("../views/pages/AgeValidation.vue"),
 		},
 		{
 			path: "/counterapp",
 			name: "counterapp",
-			component: () => import("../views/CounterApp.vue"),
+			component: () => import("../views/pages/CounterApp.vue"),
 		},
 		{
 			path: "/datepickerwith180days",
 			name: "datepickerwith180days",
-			component: () => import("../views/DatePickerwith180days.vue"),
+			component: () => import("../views/pages/DatePickerwith180days.vue"),
 		},
 		{
 			path: "/randomquotes",
 			name: "randomquotes",
-			component: () => import("../views/RandomQuotes.vue"),
+			component: () => import("../views/pages/RandomQuotes.vue"),
 		},
 		{
 			path: "/togglepasswordvisibility",
 			name: "togglepasswordvisibility",
-			component: () => import("../views/TogglePasswordVisibility.vue"),
+			component: () => import("../views/pages/TogglePasswordVisibility.vue"),
 		},
 		
 		{
 			path: "/randomcolorgenerator",
 			name: "randomcolorgenerator",
-			component: () => import("../views/RandomColorGenerator.vue"),
+			component: () => import("../views/pages/RandomColorGenerator.vue"),
 		},
 		
-		
+		{
+			path: "/passwordgenerator",
+			name: "passwordgenerator",
+			component: () => import("../views/pages/PasswordGenerator.vue"),
+		},
+		{
+			path: "/currencyconverter",
+			name: "currencyconverter",
+			component: () => import("../views/pages/CurrencyConverter.vue"),
+		},
+		{
+			path: "/leapyearchecker",
+			name: "leapyearchecker",
+			component: () => import("../views/pages/LeapYearChecker.vue"),
+		},
+		{
+			path: "/tipcalculator",
+			name: "tipcalculator",
+			component: () => import("../views/pages/TipCalculator.vue"),
+		},
+		{
+			path: "/formvalidation",
+			name: "formvalidation",
+			component: () => import("../views/pages/FormValidation.vue"),
+		},
 		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
