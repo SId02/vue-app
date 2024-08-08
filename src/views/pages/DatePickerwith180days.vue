@@ -1,3 +1,4 @@
+<style></style>
 <template>
     <div class="container p-5 mx-auto">
       <h1 class="mb-5 text-3xl text-center">Date Validation for 180 days</h1>

@@ -1,3 +1,7 @@
+
+<style>
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+</style>
 <template>
     <div class="p-5">
       <div class="flex flex-col md:flex-row md:justify-center">
@@ -40,7 +44,5 @@
   };
   </script>
   
-  <style>
-  @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-  </style>
+
   

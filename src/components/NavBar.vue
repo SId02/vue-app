@@ -1,6 +1,6 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
+
+<style scoped></style>
+
 <template>
 	<div class="relative w-full bg-white">
 		<div class="flex items-center justify-between px-4 py-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -82,4 +82,6 @@ import { RouterLink } from "vue-router";
 		</div>
 	</div>
 </template>
-<style scoped></style>
+<script setup>
+import { RouterLink } from "vue-router";
+</script>

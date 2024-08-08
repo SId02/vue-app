@@ -1,3 +1,4 @@
+<style></style>
 <template>
     <section class="flex flex-col items-center justify-center h-screen">
       <div class="container p-5 text-center">

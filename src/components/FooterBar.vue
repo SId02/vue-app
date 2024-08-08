@@ -1,6 +1,4 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-</script>
+<style scoped></style>
 <template>
 <section class="relative py-8 overflow-hidden bg-white">
     <div class="container relative z-10 px-4 mx-auto">
@@ -99,6 +97,8 @@ import { RouterLink } from 'vue-router'
   </section>
 
 </template>
-<style scoped></style>
 
 
+<script setup>
+import { RouterLink } from 'vue-router'
+</script>

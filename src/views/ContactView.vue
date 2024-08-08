@@ -1,5 +1,5 @@
-<script setup></script>
 
+<style></style>
 <template>
 	<div>
 		
@@ -96,7 +96,7 @@
 							</form>
 						</div>
 					</div>
-					<!--  -->
+				
 					<div class="space-y-4 divide-y-2">
 						<div class="flex flex-col pt-4 space-y-2 first:pt-0 lg:w-full">
 							<p class="w-full text-xl font-semibold text-gray-900">
@@ -130,10 +130,11 @@
 							</p>
 						</div>
 					</div>
-					<!--  -->
+				
 				</div>
 			</div>
 		</div>
 		
 	</div>
 </template>
+<script setup></script>

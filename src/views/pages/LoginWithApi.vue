@@ -1,3 +1,7 @@
+ 
+  <style scoped>
+ 
+</style>
 <template>
     <div>
       <div v-if="isLoggedIn" class="text-center">
@@ -56,8 +60,5 @@
     },
   };
   </script>
-  
-  <style scoped>
  
-  </style>
   

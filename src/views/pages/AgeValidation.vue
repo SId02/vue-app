@@ -1,3 +1,7 @@
+
+
+<style></style>
+  
 <template>
     <section class="p-5">
       <div class="container p-5 text-center">
@@ -59,6 +63,4 @@
     },
   };
   </script>
-  
-  <style></style>
   

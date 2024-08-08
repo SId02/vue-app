@@ -1,5 +1,36 @@
 
+<style scoped>
+.card {
+  @apply shadow-md rounded;
+}
+
+.card-content {
+  @apply p-4;
+}
+
+.card-footer {
+  @apply p-4;
+}
+
+.btn {
+  @apply px-4 py-2 rounded;
+}
+
+.btn-primary {
+  @apply bg-blue-500 hover:bg-blue-700 text-white;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 hover:bg-gray-700 text-white;
+}
+
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-700 text-white;
+}
+</style>
+
 <template>
+  
     <div class="container p-5 mx-auto bg-yellow-300">
     <section class="section">
       <div class="container mx-auto">
@@ -72,33 +103,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.card {
-  @apply shadow-md rounded;
-}
-
-.card-content {
-  @apply p-4;
-}
-
-.card-footer {
-  @apply p-4;
-}
-
-.btn {
-  @apply px-4 py-2 rounded;
-}
-
-.btn-primary {
-  @apply bg-blue-500 hover:bg-blue-700 text-white;
-}
-
-.btn-secondary {
-  @apply bg-gray-500 hover:bg-gray-700 text-white;
-}
-
-.btn-danger {
-  @apply bg-red-500 hover:bg-red-700 text-white;
-}
-</style>

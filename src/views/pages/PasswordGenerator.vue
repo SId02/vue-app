@@ -1,3 +1,4 @@
+<style></style>
 <template>
     <section>
       <div class="container p-5 mt-5 text-center">

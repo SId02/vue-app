@@ -1,5 +1,6 @@
-<script></script>
-<template>
-<h2>randomcolorgenerator</h2>
-</template>
 <style></style>
+<template>
+<h2>random color generator</h2>
+</template>
+
+<script></script>

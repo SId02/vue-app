@@ -1,7 +1,5 @@
-<script setup>
-import { RouterLink } from "vue-router";
-</script>
 
+<style></style>
 <template>
   <div class="relative w-full">
 <div class="relative z-0 px-6 bg-white isolate pt-14 lg:px-8">
@@ -75,4 +73,7 @@ import { RouterLink } from "vue-router";
 
   
 </template>
-<style></style>
+
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
