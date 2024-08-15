@@ -94,6 +94,11 @@ const router = createRouter({
 			component: () => import("../views/pages/FormValidation.vue"),
 		},
 		{
+			path: "/infinitescroll",
+			name: "infinitescroll",
+			component: () => import("../views/pages/InfiniteScroll.vue"),
+		},
+		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),
