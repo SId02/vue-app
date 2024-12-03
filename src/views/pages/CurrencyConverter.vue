@@ -2,6 +2,13 @@
 /* Add your custom styles here */
 </style>
 <template>
+<div>
+  <!--  -->
+  <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
+            Back to Home
+          </router-link>
+        <!--  -->  
+</div>
     <section class="flex justify-center h-screen">
       <div class="container max-w-md p-5 mx-auto">
         <h1 class="mb-4 text-3xl font-bold">Currency Converter</h1>

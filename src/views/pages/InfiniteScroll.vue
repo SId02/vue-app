@@ -6,6 +6,13 @@
 </style>
 
 <template>
+  <div>
+    <!--  -->
+    <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
+            Back to Home
+          </router-link>
+        <!--  -->  
+  </div>
     <div class="container p-4 mx-auto">
       <h1 class="mb-4 text-2xl font-bold text-center">Infinite Scroll</h1>
       <div class="space-y-4">

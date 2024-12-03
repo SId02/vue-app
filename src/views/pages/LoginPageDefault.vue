@@ -2,6 +2,13 @@
 <style></style>
 <template>
   <br><br>
+  <div>
+    <!--  -->
+    <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
+            Back to Home
+          </router-link>
+        <!--  -->  
+  </div>
   <div class="flex items-center max-w-sm p-6 mx-auto space-x-4 bg-white shadow-md rounded-xl">
     <div v-if="!isLoggedIn">
       <form @submit.prevent="handleSubmit">

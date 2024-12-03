@@ -31,7 +31,15 @@
 
 <template>
   
+  <div>
+    <!--  -->
+    <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
+            Back to Home
+          </router-link>
+        <!--  -->  
+  </div>
     <div class="container p-5 mx-auto bg-yellow-300">
+      
     <section class="section">
       <div class="container mx-auto">
         <div class="flex justify-center mb-5">

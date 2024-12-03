@@ -3,6 +3,13 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
 </style>
 <template>
+  <div>
+    <!--  -->
+    <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
+            Back to Home
+          </router-link>
+        <!--  -->  
+  </div>
     <div class="p-5">
       <div class="flex flex-col md:flex-row md:justify-center">
         <div class="w-full md:w-1/2">
