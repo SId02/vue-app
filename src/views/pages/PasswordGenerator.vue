@@ -110,7 +110,7 @@
   </template>
   
   <script>
-  import { ref, computed, watch } from 'vue';
+  import { ref, watch } from 'vue';
   
   export default {
     setup() {
@@ -124,7 +124,7 @@
         let pass = '';
         let letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
         if (numberAllowed.value) letter += '0123456789';
-        if (symbolAllowed.value) letter += '!@#$%&*';
+        if (symbolAllowed.value) letter += '!@#$%&*?';
   
         for (let i = 1; i <= length.value; i++) {
           let char = Math.floor(Math.random() * letter.length + 1);
