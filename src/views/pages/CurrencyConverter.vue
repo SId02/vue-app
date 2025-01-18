@@ -1,15 +1,19 @@
 <style scoped>
-/* Add your custom styles here */
 </style>
 <template>
-<div>
-  <!--  -->
-  <router-link to="/" class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700">
-            Back to Home
-          </router-link>
-        <!--  -->  
-</div>
+
+<div class="container px-4 py-6 mx-auto">
+    <div class="flex justify-start mb-6">
+      <router-link
+        to="/"
+        class="inline-block px-4 py-2 text-sm text-white transition-colors bg-gray-500 rounded hover:bg-gray-700"
+      >
+        Back to Home
+      </router-link>
+    </div>
     <section class="flex justify-center h-screen">
+      <div class="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] bg-gray-100">
+
       <div class="container max-w-md p-5 mx-auto">
         <h1 class="mb-4 text-3xl font-bold">Currency Converter</h1>
         <form class="flex flex-wrap -mx-3">
@@ -35,7 +39,9 @@
           </div>
         </form>
       </div>
+      </div>
     </section>
+  </div>
   </template>
   
   <script>
