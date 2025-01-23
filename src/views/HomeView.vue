@@ -51,9 +51,9 @@
 
         <router-link to="/infinitescroll" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Infinite Scroll</router-link> 
 
-        <router-link  to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"></router-link>
+        <router-link  to="/stopwatch" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">StopWatch</router-link>
 
-        <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"> </router-link>
+        <router-link to="/digitalclock" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Digital Clock </router-link>
 
         <router-link  to="/"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"></router-link>
 

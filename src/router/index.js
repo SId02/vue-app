@@ -94,6 +94,16 @@ const router = createRouter({
 			component: () => import("../views/pages/FormValidation.vue"),
 		},
 		{
+			path: "/digitalclock",
+			name: "digitalclock",
+			component: () => import("../views/pages/DigitalClock.vue"),
+		},
+		{
+			path: "/stopwatch",
+			name: "stopwatch",
+			component: () => import("../views/pages/StopWatch.vue"),
+		},
+		{
 			path: "/infinitescroll",
 			name: "infinitescroll",
 			component: () => import("../views/pages/InfiniteScroll.vue"),
