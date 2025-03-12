@@ -39,7 +39,7 @@
         <router-link to="/togglepasswordvisibility" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Toggle Password Visibility</router-link>
         <router-link to="/passwordgenerator" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Password Generator</router-link>
 
-        <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"> Github User Profile Finder </router-link>
+        <router-link to="/languagedisplay" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Language Display </router-link>
 
         <router-link to="/currencyconverter"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Currency Converter</router-link>
 
@@ -51,13 +51,13 @@
 
         <router-link to="/infinitescroll" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Infinite Scroll</router-link> 
 
-        <router-link  to="/stopwatch" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">StopWatch</router-link>
+        <router-link  to="/stopwatch" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Stop Watch</router-link>
 
         <router-link to="/digitalclock" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Digital Clock </router-link>
 
-        <router-link  to="/"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg"></router-link>
+        <router-link  to="/countrydetails"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Country Details</router-link>
 
-        <router-link to="/" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg "> </router-link> 
+        <router-link to="/productlist" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg "> Product List </router-link> 
       </div>
 
         <!-- <div class="flex justify-center mt-10 md:mt-20">

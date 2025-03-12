@@ -109,6 +109,26 @@ const router = createRouter({
 			component: () => import("../views/pages/InfiniteScroll.vue"),
 		},
 		{
+			path: "/countrydetails",
+			name: "countrydetails",
+			component: () => import("../views/pages/CountryDetails.vue"),
+		},
+		{
+			path: "/productlist",
+			name: "productlist",
+			component: () => import("../views/pages/ProductList.vue"),
+		},
+		{
+			path: "/productlistssf",
+			name: "productlistssf",
+			component: () => import("../views/pages/ProductListSSF.vue"),
+		},
+		{
+			path: "/languagedisplay",
+			name: "languagedisplay",
+			component: () => import("../views/pages/LanguageDisplay.vue"),
+		},
+		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),
