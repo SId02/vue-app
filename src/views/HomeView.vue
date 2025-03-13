@@ -58,6 +58,7 @@
         <router-link  to="/countrydetails"  class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg">Country Details</router-link>
 
         <router-link to="/productlist" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg "> Product List </router-link> 
+        <router-link to="/productlistssf" class="flex items-center justify-center h-12 bg-white rounded-md shadow-lg ">Product List Sort Search Filter</router-link> 
       </div>
 
         <!-- <div class="flex justify-center mt-10 md:mt-20">
