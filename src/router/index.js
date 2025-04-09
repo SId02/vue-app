@@ -129,6 +129,16 @@ const router = createRouter({
 			component: () => import("../views/pages/LanguageDisplay.vue"),
 		},
 		{
+			path: "/passwordstrengthchecker",
+			name: "passwordstrengthchecker",
+			component: () => import("../views/pages/PasswordStrengthChecker.vue"),
+		},
+		{
+			path: "/randomusers",
+			name: "randomusers",
+			component: () => import("../views/pages/RandomUsers.vue"),
+		},
+		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),
