@@ -134,6 +134,16 @@ const router = createRouter({
 			component: () => import("../views/pages/PasswordStrengthChecker.vue"),
 		},
 		{
+			path: "/weatherstatus",
+			name: "weatherstatus",
+			component: () => import("../views/pages/WeatherStatus.vue"),
+		},
+
+		{
+			path: "/studentcrud",
+			name: "studentcrud",
+			component: () => import("../views/pages/StudentCRUD.vue"),
+		},{
 			path: "/randomusers",
 			name: "randomusers",
 			component: () => import("../views/pages/RandomUsers.vue"),
