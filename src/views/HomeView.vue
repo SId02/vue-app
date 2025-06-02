@@ -50,6 +50,7 @@ import { ref, computed } from "vue";
 import { RouterLink } from "vue-router";
 
 const projects = ref([
+  
   { label: "Age Validation", path: "/agevalidation" },
   { label: "Counter", path: "/counterapp" },
   { label: "Date Picker 180 Days", path: "/datepickerwith180days" },
@@ -64,12 +65,14 @@ const projects = ref([
   { label: "Tip Calculator", path: "/tipcalculator" },
   { label: "Infinite Scroll", path: "/infinitescroll" },
   { label: "Stop Watch", path: "/stopwatch" },
+  { label: "Student Crud", path: "/studentcrud" },
   { label: "Digital Clock", path: "/digitalclock" },
   { label: "Country Details", path: "/countrydetails" },
   { label: "Product List", path: "/productlist" },
   { label: "Product List SSF", path: "/productlistssf" },
   { label: "Password Strength", path: "/passwordstrengthchecker" },
   { label: "Random Users", path: "/randomusers" },
+  { label: "Weather Status", path: "/weatherstatus" },
 ]);
 
 const visibleProjectsCount = ref(8);
