@@ -149,6 +149,11 @@ const router = createRouter({
 			component: () => import("../views/pages/RandomUsers.vue"),
 		},
 		{
+			path: "/dynamicform",
+			name: "dynamicform",
+			component: () => import("../views/pages/DynamicForm.vue"),
+		},
+		{
 			path: "/:pathMatch(.*)*",
 			name: "NotFound",
 			component: () => import("../views/NotFound.vue"),

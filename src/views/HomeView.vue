@@ -73,6 +73,7 @@ const projects = ref([
   { label: "Password Strength", path: "/passwordstrengthchecker" },
   { label: "Random Users", path: "/randomusers" },
   { label: "Weather Status", path: "/weatherstatus" },
+  { label: "Dynamic Form", path: "/dynamicform" },
 ]);
 
 const visibleProjectsCount = ref(8);
