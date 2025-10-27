@@ -1,17 +1,24 @@
+# vue-app
+
+This template should help get you started developing with Vue 3 in Vite.
 
 ### Live Preview 
 
 [Live Demo](https://vue-app-9r1.pages.dev/)
 
 
-
-# vue-app
-
-This template should help get you started developing with Vue 3 in Vite.
-
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Recommended Browser Setup
+
+- Chromium-based browsers (Chrome, Edge, Brave, etc.):
+  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
+  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
+- Firefox:
+  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
+  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
 ## Customize configuration
 
@@ -40,32 +47,3 @@ npm run build
 ```sh
 npm run lint
 ```
-
-### Packages Installation
-
-Install the necessary packages using npm:
-
-```
-npm install vue@3.5.16
-npm install vue-router@4.5.1
-npm install axios@1.9.0
-npm install vue-i18n@11.1.5
-npm install tailwindcss
-```
-
-### API
-
-The following APIs are used for demonstration purposes:
-
-*   [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
-*   [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)
-*   [Weather API](https://open-meteo.com/)
-*   [Random User API](https://randomuser.me/api/)
-*   [Dummyjson product Api](https://dummyjson.com/products)
-*   [Dummyjson API](`https://dummyjson.com/posts)
-*   [Dummyjson API](https://dummyjson.com/auth/login)
-*   [Quotes API](https://api.quotable.io/random)
-*   [Currency API](https://api.exchangerate-api.com/v4/latest/)
-
-
-
