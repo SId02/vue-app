@@ -1,11 +1,7 @@
-<script setup>
-import {  RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import FooterBar from './components/FooterBar.vue'
-</script>
-
+<style scoped>
+</style>
 <template>
-  <header>
+   <header>
  <div class="wrapper">
         <NavBar />
         <RouterView />
@@ -13,7 +9,9 @@ import FooterBar from './components/FooterBar.vue'
       </div>
   </header>
 </template>
+<script setup>
+import {  RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import FooterBar from './components/FooterBar.vue'
+</script>
 
-<style scoped>
-
-</style>

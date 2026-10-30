@@ -1,121 +1,106 @@
-<style></style>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, 4px);
+}
+</style>
 <template>
-  <div class="container px-4 py-6 mx-auto">
-    <div class="flex justify-start mb-6">
+  <div class="min-h-screen bg-slate-50 text-slate-800 flex flex-col transition-colors duration-500" :style="{ backgroundColor: currentBgTint }">
+    
+    <!-- Top Bar Navigation -->
+    <div class="max-w-4xl w-full mx-auto px-6 pt-6">
       <router-link
         to="/"
-        class="inline-block px-4 py-2 text-sm text-white transition-colors bg-gray-500 rounded hover:bg-gray-700"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-white/80 backdrop-blur-md border border-slate-200/80 rounded-xl shadow-sm hover:bg-white transition-all"
       >
-        Back to Home
+        ← Back to Home
       </router-link>
     </div>
 
-    <section>
-      <div class="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] bg-gray-100">
-        <div class="w-full max-w-md p-6 rounded-lg shadow-lg" :style="{ backgroundColor: color }">
-          <div class="p-4 mb-4 bg-white rounded-lg">
-            <div class="flex items-center justify-between">
-              <h2 class="text-xl font-bold">Random Color Generator</h2>
-              <span class="px-3 py-1 font-mono text-lg bg-gray-100 rounded">
-                {{ color }}
-              </span>
-            </div>
-            <button
-              @click="copyToClipboard"
-              class="p-2 mt-2 transition bg-gray-200 rounded hover:bg-gray-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
-            </button>
+    <!-- Main Generator Container -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+      <div class="w-full max-w-md">
+        
+        <!-- Card Box with dynamic border accent matching the selected color -->
+        <div 
+          class="bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-xl border border-white/20 transition-all duration-300"
+        >
+          
+          <div class="text-center mb-8">
+            <h1 class="text-2xl font-extrabold tracking-tight text-slate-900">Color Studio</h1>
+            <p class="text-sm text-slate-500 mt-1">Generate random HEX colors and copy them instantly</p>
           </div>
 
+          <!-- Color Preview & Hex Display Box -->
+          <div class="flex items-center justify-between p-4 bg-slate-100/80 rounded-2xl border border-slate-200/60 mb-6">
+            <div class="flex items-center space-x-3">
+              <!-- Visual color swatch circle -->
+              <div 
+                class="w-10 h-10 rounded-full shadow-inner border border-black/10 transition-colors duration-300"
+                :style="{ backgroundColor: color }"
+              ></div>
+              <div>
+                <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">HEX Code</span>
+                <span class="font-mono text-lg font-bold text-slate-800">{{ color }}</span>
+              </div>
+            </div>
+
+            <!-- Copy Button with dynamic copied tooltip state -->
+            <div class="relative">
+              <button
+                @click="copyToClipboard"
+                class="p-3 text-slate-600 bg-white hover:bg-slate-50 active:scale-95 rounded-xl shadow-sm border border-slate-200/80 transition-all focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                title="Copy to clipboard"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+              </button>
+
+              <!-- Copied Notification Popup -->
+              <transition name="fade">
+                <span 
+                  v-if="copied" 
+                  class="absolute -top-9 left-1/2 -translate-x-1/2 px-2.5 py-1 text-xs font-semibold text-white bg-slate-900 rounded-lg shadow-md whitespace-nowrap"
+                >
+                  Copied! 🎉
+                </span>
+              </transition>
+            </div>
+          </div>
+
+          <!-- Generate Button -->
           <button
             @click="generateColor"
-            class="w-full py-3 text-black transition bg-white rounded-lg hover:bg-gray-100"
+            class="w-full py-3.5 px-4 text-white font-medium bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] rounded-xl shadow-lg shadow-indigo-500/25 transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             Generate Random Color
           </button>
+
         </div>
       </div>
-    </section>
+    </main>
   </div>
 </template>
 
-
-
-<!-- 
-<template>
-
-   
-  <div>
-    <router-link
-      to="/"
-      class="w-full p-2 mt-4 text-sm text-center text-white bg-gray-500 rounded hover:bg-gray-700"
-    >
-      Back to Home
-    </router-link>
-  </div>
- 
-  <section>
-    <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div class="w-full max-w-md p-6 rounded-lg shadow-lg" :style="{ backgroundColor: color }">
-        <div class="p-4 mb-4 bg-white rounded-lg">
-          <div class="flex items-center justify-between">
-            <h2 class="text-xl font-bold">Random Color Generator</h2>
-            <span class="px-3 py-1 font-mono text-lg bg-gray-100 rounded">
-              {{ color }}
-            </span>
-          </div>
-          <button
-            @click="copyToClipboard"
-            class="p-2 mt-2 transition bg-gray-200 rounded hover:bg-gray-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-              />
-            </svg>
-          </button>
-        </div>
-
-        <button
-          @click="generateColor"
-          class="w-full py-3 text-black transition bg-white rounded-lg hover:bg-gray-100"
-        >
-          Generate Random Color
-        </button>
-      </div>
-    </div>
-  </section>
-</template>  -->
-
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-const color = ref('#000000')
+const color = ref('#6366F1') // Default starting color (Indigo)
 const copied = ref(false)
+
+// Subtle background tint that shifts slightly based on the selected color
+const currentBgTint = computed(() => {
+  return `${color.value}0A` // Appends low opacity alpha hex code for smooth ambient background tint
+})
 
 const getRandomNumber = () => {
   return Math.floor(Math.random() * hex.length)

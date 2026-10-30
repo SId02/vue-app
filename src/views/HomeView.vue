@@ -1,48 +1,76 @@
-
 <template>
-  <div class="relative w-full">
-    <div class="relative z-0 px-6 bg-white isolate pt-14 lg:px-8">
-      <div class="relative max-w-2xl py-24 mx-auto">
-        <div class="text-center">
-          <h3 class="text-2xl font-bold tracking-tight text-transparent text-gray-900 sm:text-4xl bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-800">
-            Projects in VueJS 3, Vue Router 4, Tailwind CSS 3, Axios
-          </h3>
-          <p class="mt-6 text-lg leading-8 text-gray-600">
-            In this project learning Vue JS, Vue Router, and Tailwind CSS for style.
-            Some projects fetch data from APIs and display it.
-          </p>
-          <div class="flex items-center justify-center mt-10 gap-x-2">
-            <a href="https://vuejs.org/"
-              class="px-3 py-2 text-sm font-semibold text-white transition-all duration-300 ease-in-out bg-black rounded-md shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black focus:outline-none focus:shadow-outlinetransform hover:scale-105">
-              Vue JS
-            </a>
+  <div class="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between">
+    
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden px-6 pt-16 pb-12 lg:px-8 border-b border-slate-200/60 bg-white">
+      <div class="max-w-3xl mx-auto text-center space-y-6">    
+        <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-5xl leading-tight">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-indigo-600">Vue 3 & Tailwind 3.4.19</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          A collection of interactive components built to master Vue Router 4 , Composition API, reactive state management, and modern API integrations.
+        </p>
 
-            <a href="https://tailwindcss.com/"
-              class="px-3 py-2 text-sm font-semibold text-black transition-all duration-300 ease-in-out border border-black rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black focus:outline-none focus:shadow-outlinetransform hover:scale-105">
-              Tailwind CSS
-            </a>
-          </div>
+        <div class="flex items-center justify-center gap-3 pt-2">
+          <a
+            href="https://vuejs.org/"
+            target="_blank"
+            class="px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-xl shadow-sm hover:bg-slate-800 transition-all hover:scale-105 active:scale-95"
+          >
+            Vue.js 3
+          </a>
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="px-4 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-200 rounded-xl shadow-sm hover:bg-slate-50 transition-all hover:scale-105 active:scale-95"
+          >
+            Tailwind CSS
+          </a>
+          <a
+            href="https://router.vuejs.org/"
+            target="_blank"
+            class="px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-xl shadow-sm hover:bg-slate-800 transition-all hover:scale-105 active:scale-95"
+          >
+            Vue Router 4
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-  <section class="relative py-10 bg-zinc-300 sm:py-16 lg:py-24 lg:pt-36">
-    <div class="px-4 mx-auto space-y-5 text-center max-w-7xl sm:px-6 lg:px-8 md:space-y-10">
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-6">
-        <RouterLink v-for="project in displayedProjects" :key="project.path" :to="project.path"
-          class="flex items-center justify-center px-4 py-3 font-medium text-blue-600 transition-colors duration-300 bg-white rounded-md shadow-md hover:text-blue-800">
-          {{ project.label }}
-        </RouterLink>
-      </div>
+    </header>
 
-      <div v-if="displayedProjects.length < projects.length" class="flex justify-center mt-10 md:mt-20">
-        <button @click="showMoreProjects"
-          class="px-3 py-2 text-sm font-semibold text-black transition-all duration-300 ease-in-out border border-black rounded-md shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black focus:outline-none focus:shadow-outlinetransform hover:scale-105">
-          show more...
-        </button>
+    <!-- Projects Section -->
+    <main class="flex-1 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+      <div class="space-y-8">
+        
+        <!-- Grid List of Projects -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <RouterLink
+            v-for="project in displayedProjects"
+            :key="project.path"
+            :to="project.path"
+            class="group relative flex items-center justify-between p-5 bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-indigo-500/50 transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <span class="font-medium text-slate-800 group-hover:text-indigo-600 transition-colors text-sm">
+              {{ project.label }}
+            </span>
+            <span class="text-slate-300 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all">
+              →
+            </span>
+          </RouterLink>
+        </div>
+
+        <!-- Show More Action Button -->
+        <div v-if="displayedProjects.length < projects.length" class="flex justify-center pt-8">
+          <button
+            @click="showMoreProjects"
+            class="px-6 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-2xl shadow-sm hover:bg-slate-50 hover:border-slate-300 transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            Show More Projects ({{ projects.length - displayedProjects.length }} remaining) ↓
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
+    </main>
+  </div>
 </template>
 
 <script setup>
@@ -50,7 +78,6 @@ import { ref, computed } from "vue";
 import { RouterLink } from "vue-router";
 
 const projects = ref([
-  
   { label: "Age Validation", path: "/agevalidation" },
   { label: "Counter", path: "/counterapp" },
   { label: "Date Picker 180 Days", path: "/datepickerwith180days" },
@@ -67,10 +94,8 @@ const projects = ref([
   { label: "Stop Watch", path: "/stopwatch" },
   { label: "Student Crud", path: "/studentcrud" },
   { label: "Digital Clock", path: "/digitalclock" },
-  { label: "Country Details", path: "/countrydetails" },
   { label: "Product List", path: "/productlist" },
   { label: "Product List SSF", path: "/productlistssf" },
-  { label: "Password Strength", path: "/passwordstrengthchecker" },
   { label: "Random Users", path: "/randomusers" },
   { label: "Weather Status", path: "/weatherstatus" },
   { label: "Dynamic Form", path: "/dynamicform" },

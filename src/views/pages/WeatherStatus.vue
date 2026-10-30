@@ -1,4 +1,5 @@
-<style scoped></style>
+<style scoped>
+</style>
 <template>
   <section class="min-h-screen py-8 bg-blue-100">
     <div class="container px-4 mx-auto">
@@ -30,7 +31,7 @@
 
         <div class="mb-8">
           <h2 class="mb-4 text-xl font-semibold">
-            {{ showWorldCities ? 'Top 10 Cities in the World' : 'Top 10 Cities in India' }}
+            {{ showWorldCities ? 'Top Cities in the World' : 'Top Cities in India' }}
           </h2>
           <div v-if="loadingTopCities" class="text-center">
             <div class="w-12 h-12 mx-auto border-b-2 border-blue-500 rounded-full animate-spin"></div>
@@ -128,10 +129,8 @@
   </section>
 </template>
 
-
 <script setup>
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
 
 const weatherDescriptions = {
   0: 'Clear sky',
@@ -155,8 +154,9 @@ const topWorldCities = [
 ];
 
 const topIndiaCities = [
-  'Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai',
-  'Kolkata', 'Pune', 'Ahmedabad', 'Jaipur', 'Lucknow'
+  'Mumbai', 'Delhi', 'Bengaluru', 'Hyderabad', 'Chennai',
+  'Kolkata', 'Pune', 'Ahmedabad', 'Jaipur', 'Lucknow',
+  'Varanasi', 'Chandigarh', 'Kochi', 'Agra', 'Patna', 'Bhopal'
 ];
 
 const city = ref('');
@@ -172,18 +172,22 @@ const showWorldCities = ref(true);
 
 const fetchWeatherForCity = async (cityName) => {
   try {
-    const geoRes = await axios.get(
-      `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1`
+    const geoRes = await fetch(
+      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1`
     );
-    if (geoRes.data.results && geoRes.data.results.length > 0) {
-      const { latitude, longitude, name, country } = geoRes.data.results[0];
-      const weatherRes = await axios.get(
+    const geoData = await geoRes.json();
+    
+    if (geoData.results && geoData.results.length > 0) {
+      const { latitude, longitude, name, country } = geoData.results[0];
+      const weatherRes = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
       );
+      const weatherDataRes = await weatherRes.json();
+      
       return {
         city: name,
         country,
-        ...weatherRes.data.current_weather
+        ...weatherDataRes.current_weather
       };
     }
   } catch (err) {
@@ -197,11 +201,13 @@ const getCoordinates = async (cityName) => {
   weatherData.value = null;
   loading.value = true;
   try {
-    const response = await axios.get(
-      `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}&count=1`
+    const response = await fetch(
+      `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(cityName)}&count=1`
     );
-    if (response.data.results && response.data.results.length > 0) {
-      const { latitude, longitude, name, country } = response.data.results[0];
+    const data = await response.json();
+    
+    if (data.results && data.results.length > 0) {
+      const { latitude, longitude, name, country } = data.results[0];
       await getWeather(latitude, longitude, name, country);
     } else {
       throw new Error('Location not found. Please check the city name.');
@@ -214,10 +220,11 @@ const getCoordinates = async (cityName) => {
 
 const getWeather = async (latitude, longitude, cityName, countryName) => {
   try {
-    const response = await axios.get(
+    const response = await fetch(
       `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`
     );
-    weatherData.value = { ...response.data.current_weather, city: cityName, country: countryName };
+    const data = await response.json();
+    weatherData.value = { ...data.current_weather, city: cityName, country: countryName };
   } catch (error) {
     errorMessage.value = 'Weather data not available for this location.';
   } finally {
@@ -251,3 +258,4 @@ onMounted(async () => {
   loadingTopCities.value = false;
 });
 </script>
+

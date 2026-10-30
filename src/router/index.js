@@ -16,11 +16,6 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: '/project',
-      name: 'project',
-      component: () => import('../views/ProjectView.vue'),
-    },
-    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue'),
@@ -107,11 +102,7 @@ const router = createRouter({
       name: 'infinitescroll',
       component: () => import('../views/pages/InfiniteScroll.vue'),
     },
-    {
-      path: '/countrydetails',
-      name: 'countrydetails',
-      component: () => import('../views/pages/CountryDetails.vue'),
-    },
+   
     {
       path: '/productlist',
       name: 'productlist',
@@ -128,16 +119,10 @@ const router = createRouter({
       component: () => import('../views/pages/LanguageDisplay.vue'),
     },
     {
-      path: '/passwordstrengthchecker',
-      name: 'passwordstrengthchecker',
-      component: () => import('../views/pages/PasswordStrengthChecker.vue'),
-    },
-    {
       path: '/weatherstatus',
       name: 'weatherstatus',
       component: () => import('../views/pages/WeatherStatus.vue'),
     },
-
     {
       path: '/studentcrud',
       name: 'studentcrud',

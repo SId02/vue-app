@@ -1,118 +1,107 @@
 
-<style scoped>
-.card {
-  @apply shadow-md rounded;
-}
-
-.card-content {
-  @apply p-4;
-}
-
-.card-footer {
-  @apply p-4;
-}
-
+<style lang="postcss" scoped>
 .btn {
-  @apply px-4 py-2 rounded;
+  @apply py-3 px-4 text-xs font-semibold rounded-xl shadow-sm transition-all active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2;
 }
 
 .btn-primary {
-  @apply bg-blue-500 hover:bg-blue-700 text-white;
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white shadow-indigo-500/25 focus:ring-indigo-500;
 }
 
 .btn-secondary {
-  @apply bg-gray-500 hover:bg-gray-700 text-white;
+  @apply bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 focus:ring-slate-400;
 }
 
 .btn-danger {
-  @apply bg-red-500 hover:bg-red-700 text-white;
+  @apply bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200/60 focus:ring-rose-500;
 }
 </style>
-
 <template>
-  
-  <div class="container px-4 py-6 mx-auto">
-    <div class="flex justify-start mb-6">
+  <div class="min-h-screen bg-slate-50 text-slate-800 flex flex-col justify-between">
+    
+    <!-- Top Bar Navigation -->
+    <div class="max-w-4xl w-full mx-auto px-6 pt-6">
       <router-link
         to="/"
-        class="inline-block px-4 py-2 text-sm text-white transition-colors bg-gray-500 rounded hover:bg-gray-700"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-200/80 rounded-xl shadow-sm hover:bg-slate-100 transition-all"
       >
-        Back to Home
+        ← Back to Home
       </router-link>
     </div>
-    <div class="flex flex-col items-center justify-center min-h-[calc(100vh-120px)] bg-gray-100">
-    <div class="container p-5 mx-auto bg-yellow-300">
-      
-    <section class="section">
-      <div class="container mx-auto">
-        <div class="flex justify-center mb-5">
-          <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-            <h3 class="mb-4 text-3xl font-bold text-center">Counter</h3>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+      <div class="w-full max-w-md">
+        
+        <!-- Card Container -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200/80 text-center space-y-8">
+          
+          <div>
+            <h1 class="text-2xl font-extrabold tracking-tight text-slate-900">Interactive Counter</h1>
+            <p class="text-sm text-slate-500 mt-1">Increment, decrement, or reset your count instantly</p>
           </div>
+
+          <!-- Count Display Box -->
+          <div class="py-8 bg-slate-50 rounded-2xl border border-slate-100 shadow-inner">
+            <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-1">Current Count</span>
+            <span class="text-6xl font-black font-mono tracking-tight transition-colors duration-300" :style="{ color: countColor }">
+              {{ count }}
+            </span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="grid grid-cols-3 gap-3">
+            <button class="btn btn-primary" @click="incrementCount">
+              + Add
+            </button>
+            <button class="btn btn-secondary" @click="resetCount">
+              Reset
+            </button>
+            <button class="btn btn-danger" @click="decrementCount">
+              - Sub
+            </button>
+          </div>
+
         </div>
-        <div class="flex justify-center">
-          <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
-            <div class="bg-white rounded shadow-md card">
-              <div class="p-4 card-content">
-                <div class="text-center content">
-                  <p class="mb-4 text-4xl font-bold" :style="{ color: countColor }">
-                    {{ count }}
-                  </p>
-                </div>
-              </div>
-              <footer class="p-4 card-footer">
-                <button class="mr-2 btn btn-primary" @click="incrementCount">
-                  Increment + <i class="fa-solid fa-plus"></i>
-                </button>
-                <button class="mr-2 btn btn-secondary" @click="resetCount">
-                  Reset <i class="fa-solid fa-rotate"></i>
-                </button>
-                <button class="btn btn-danger" @click="decrementCount">
-                  Decrement - <i class="fa-solid fa-minus"></i>
-                </button>
-              </footer>
-            </div>
-          </div>
+
+      </div>
+    </main>
+
+    <!-- Minimalist Footer -->
+    <footer class="py-8 bg-white border-t border-slate-200/80 text-center">
+      <div class="max-w-7xl mx-auto px-4 flex justify-center items-center">
+        <div class="flex items-center space-x-1 font-medium text-slate-500 text-xs sm:text-sm">
+          <span>Built with</span>
+          <span class="text-indigo-600 font-semibold">Vue 3 Composition API</span>
+          <span>&</span>
+          <span class="text-slate-800 font-semibold">Tailwind CSS</span>
         </div>
       </div>
-    </section>
+    </footer>
+
   </div>
-</div>
-</div> 
 </template>
 
-<script>
+<script setup>
 import { ref, computed } from 'vue';
 
-export default {
-  setup() {
-    const count = ref(0);
+const count = ref(0);
 
-    const countColor = computed(() => {
-      if (count.value > 0) return 'green';
-      else if (count.value < 0) return 'red';
-      else return 'grey';
-    });
+const countColor = computed(() => {
+  if (count.value > 0) return '#16a34a'; // Emerald Green
+  else if (count.value < 0) return '#dc2626'; // Red
+  else return '#64748b'; // Slate Gray for 0
+});
 
-    const incrementCount = () => {
-      count.value++;
-    };
+const incrementCount = () => {
+  count.value++;
+};
 
-    const decrementCount = () => {
-      count.value--;
-    };
+const decrementCount = () => {
+  count.value--;
+};
 
-    const resetCount = () => {
-      count.value = 0;
-    };
-
-    return {
-      count,
-      countColor,
-      incrementCount,
-      decrementCount,
-      resetCount,
-    };
-  },
+const resetCount = () => {
+  count.value = 0;
 };
 </script>
