@@ -1,4 +1,3 @@
-
 <style>
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
 </style>
@@ -32,15 +31,15 @@
   
   <script>
   import { ref } from 'vue';
-  import axios from 'axios';
   
   export default {
     setup() {
       const quote = ref('');
   
       const handleQuote = async () => {
-        const res = await axios.get('https://api.quotable.io/random');
-        quote.value = res.data.content;
+        const res = await fetch('https://api.quotable.io/random');
+        const data = await res.json();
+        quote.value = data.content;
       };
   
       return {
@@ -50,6 +49,3 @@
     },
   };
   </script>
-  
-
-  
